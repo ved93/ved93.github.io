@@ -4,9 +4,8 @@ layout: post
 description: Most people think Kaggle is critical to data-science. No it's not. Its only a good to have.
 categories: [kaggle, notes, learning]
 title: Problem-Solving in Data Science
+date:   2023-08-20 14:21:36 +0530
 ---
-
-
 Few years back, when I started my journey in data-science, I was fascinated by Kaggle. I used to devote my time there. I was overwhelmed by the knowledge and problems. I wanted to be competitive and kaggle shows their leaderboard. You win and make a name. 
 I used to have casual discussions with my manager on variety of topics. One day I asked my manager which things are most important in data science and what's his opinion about Kaggle.  
 

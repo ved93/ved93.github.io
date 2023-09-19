@@ -1,0 +1,53 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// @import
+//   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+//   "minima/initialize";
+
+// body.dark-theme {
+//   // @import "{{ site.minima.dark_skin }}";
+//   background-color: #121212;
+//   color: #ffffff;
+// }
+
+@import "minima/skins/{{ site.minima.skin | default: 'classic' }}";
+@import "minima/initialize";
+@import "minima/skins/dark"; // Adjusted to the correct relative path
+
+// body.dark-theme {
+//   @import "minima/skins/dark"; // This line imports the dark theme styles when the body has the .dark-theme class
+// }
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+
+  header, 
+  .site-header, 
+  .page-header {
+    background-color: #121212; // Adjust as necessary
+    color: #ffffff; // Adjust as necessary
+  }
+
+  header a, 
+  .site-header a, 
+  .page-header a {
+    color: #bb86fc; // Adjust as necessary
+  }
+
+  // ... other dark theme styles
+}
+
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it appears above other elements */
+}

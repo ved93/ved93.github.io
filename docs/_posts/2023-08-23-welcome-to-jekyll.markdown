@@ -1,5 +1,6 @@
 ---
 layout: post
+hide: true
 title:  "Welcome to Jekyll!"
 date:   2023-08-23 14:21:36 +0530
 categories: jekyll update

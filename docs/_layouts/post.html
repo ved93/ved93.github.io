@@ -14,6 +14,17 @@ layout: base
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: date_format }}
       </time>
+
+      {%- assign words = content | number_of_words %}
+      {%- assign minutes = words | divided_by:200 %}
+      <span class="reading-time" style="margin-left: 10px;">
+        {%- if minutes <= 1 %}
+        (1 minute read)
+        {%- else %}
+        ({{ minutes }} minutes read)
+        {%- endif %}
+      </span>
+
       {%- if page.modified_date -%}
         ~ 
         {%- assign mdate = page.modified_date | date_to_xmlschema -%}
@@ -28,6 +39,7 @@ layout: base
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}</p>
+
       {% if page.tags.size > 0 %}
       <div style="margin-top: 20px;">
         <strong>Tags:</strong>
@@ -38,6 +50,8 @@ layout: base
       {% endif %}
 
   </header>
+
+
 
 
 

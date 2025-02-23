@@ -15,7 +15,17 @@
 
     {%- include footer.html -%}
 
-    <button id="theme-toggle">Toggle Dark Theme</button>
+    <!-- <button id="theme-toggle">Toggle Dark Theme</button> -->
+    <!-- <button id="theme-toggle" style="position: absolute; top: 10px; right: 10px;">Toggle Dark Theme</button> -->
+
+    <div id="theme-toggle-container">
+      <!-- <input type="checkbox" id="theme-toggle">
+      <label for="theme-toggle" id="theme-toggle-label">Toggle Dark Theme</label> -->
+      <input class="theme-toggle-checkbox" id="theme-toggle" name="theme-toggle-checkbox" type="checkbox"/>
+      <label class="theme-toggle-label" for="theme-toggle"></label>
+
+    </div>
+
 
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {

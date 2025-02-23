@@ -41,13 +41,122 @@ body.dark-theme {
 }
 
 
-#theme-toggle {
-  position: fixed;
+// #theme-toggle {
+//   position: fixed;
+//   top: 10px;
+//   right: 10px;
+//   background-color: #f0f0f0;
+//   border: none;
+//   padding: 10px;
+//   cursor: pointer;
+//   z-index: 1000; /* Ensure it appears above other elements */
+// }
+
+// ... other styles
+
+// #theme-toggle-container {
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+//   display: flex;
+//   align-items: center;
+//   cursor: pointer;
+// }
+
+// #theme-toggle {
+//   appearance: none;
+//   width: 40px;
+//   height: 20px;
+//   background: #ccc;
+//   border-radius: 20px;
+//   position: relative;
+//   outline: none;
+//   cursor: pointer;
+//   border: none;
+//   transition: background 0.3s;
+// }
+
+// #theme-toggle::before {
+//   content: '';
+//   position: absolute;
+//   width: 16px;
+//   height: 16px;
+//   background: #fff;
+//   border-radius: 50%;
+//   top: 2px;
+//   left: 2px;
+//   transition: transform 0.3s;
+// }
+
+// #theme-toggle:checked {
+//   background: #333;
+// }
+
+// #theme-toggle:checked::before {
+//   transform: translateX(20px);
+// }
+
+// #theme-toggle-label {
+//   margin-left: 8px;
+//   font-size: 14px;
+// }
+
+
+#theme-toggle-container {
+  position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #f0f0f0;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000; /* Ensure it appears above other elements */
+  display: flex;
+  align-items: center;
 }
+
+#theme-toggle {
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  background-color: #111;
+  border-radius: 50px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle:before {
+  content: "\2600"; /* Unicode sun character */
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #FFA500;
+}
+
+#theme-toggle:after {
+  content: "\1F319"; /* Unicode moon character */
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #f1c40f;
+  display: none; /* Hide moon icon initially */
+}
+
+#theme-toggle:checked {
+  background-color: #333;
+}
+
+#theme-toggle:checked:before {
+  display: none; /* Hide sun icon when checked */
+}
+
+#theme-toggle:checked:after {
+  display: block; /* Show moon icon when checked */
+}
+
+#theme-toggle-label {
+  display: none; /* Hide the label as we are using icons instead */
+}
+

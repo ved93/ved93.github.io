@@ -1,6 +1,6 @@
 ---
 toc: true
-# hide: true
+hide: false
 layout: post
 description:  
 tags: [career, learning]
